@@ -3,24 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unity Editor Scripts for 3D Artists</title>
-    <link rel="stylesheet" href="style.css">
+    <title>3D Artist Unity Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .disclaimer {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .disclaimer h3 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+        
+        .scripts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .script-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .script-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .script-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .script-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .script-actions {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5a6fd8;
+        }
+        
+        .btn-secondary {
+            background: #e9ecef;
+            color: #495057;
+        }
+        
+        .btn-secondary:hover {
+            background: #dee2e6;
+        }
+        
+        .category {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .repo-link {
+            color: #74b9ff;
+            text-decoration: none;
+        }
+        
+        .repo-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Unity Editor Scripts</h1>
-        <p>Automation tools for cross-platform 3D content migration</p>
+        <div class="container">
+            <h1>3D Artist Unity Tools</h1>
+            <p>Random Unity editor scripts for cross-platform 3D content workflow</p>
+        </div>
     </header>
-    
-    <main>
-        <section class="scripts">
+
+    <main class="container">
+        <div class="disclaimer">
+            <h3>⚠️ Important Notice</h3>
+            <p>These scripts are provided as-is without warranty. Limited testing has been done. Always backup your projects before use. No support is provided.</p>
+        </div>
+
+        <div class="scripts-grid">
+            
             <div class="script-card">
-                <h3>Script Name</h3>
-                <p>Brief description of what it does</p>
-                <a href="scripts/ScriptName.cs" download>Download</a>
-                <a href="#usage-scriptname">Usage</a>
+                <span class="category">Script Cleanup</span>
+                <h3>Missing Scripts Replacer</h3>
+                <p>Replace missing script references in GameObjects with new scripts while preserving existing component data.</p>
+                <div class="script-actions">
+                    <a href="https://github.com/LaurieAnnis/3D-artist-Unity-tools/blob/main/scripts/MissingScriptsReplacer.cs" class="btn btn-primary">View Script</a>
+                    <a href="https://github.com/LaurieAnnis/3D-artist-Unity-tools/blob/main/docs/MissingScriptsReplacerDocumentation.md" class="btn btn-secondary">Documentation</a>
+                </div>
             </div>
+
+            <div class="script-card">
+                <span class="category">Prefab Cleanup</span>
+                <h3>Prefab Missing Script Cleaner</h3>
+                <p>Clean missing script components from prefabs in your project to prevent warnings and errors.</p>
+                <div class="script-actions">
+                    <a href="https://github.com/LaurieAnnis/3D-artist-Unity-tools/blob/main/scripts/PrefabMissingScriptCleaner.cs" class="btn btn-primary">View Script</a>
+                    <a href="https://github.com/LaurieAnnis/3D-artist-Unity-tools/blob/main/docs/PrefabMissingScriptCleanerDocumentation.md" class="btn btn-secondary">Documentation</a>
+                </div>
+            </div>
+
+            <div class="script-card">
+                <span class="category">Script Cleanup</span>
+                <h3>Remove Missing Script Placeholders</h3>
+                <p>Remove placeholder entries for missing scripts from GameObjects and components in scenes.</p>
+                <div class="script-actions">
+                    <a href="https://github.com/LaurieAnnis/3D-artist-Unity-tools/blob/main/scripts/RemoveMissingScriptPlaceholders.cs" class="btn btn-primary">View Script</a>
+                    <a href="https://github.com/LaurieAnnis/3D-artist-Unity-tools/blob/main/docs/RemoveMissingScriptPlaceholders.md" class="btn btn-secondary">Documentation</a>
+                </div>
+            </div>
+
+            <div class="script-card">
+                <span class="category">Script Cleanup</span>
+                <h3>Remove Missing Scripts Tool</h3>
+                <p>Comprehensive tool for detecting and removing missing script references across your entire project.</p>
+                <div class="script-actions">
+                    <a href="https://github.com/LaurieAnnis/3D-artist-Unity-tools/blob/main/scripts/RemoveMissingScriptsTool.cs" class="btn btn-primary">View Script</a>
+                    <a href="https://github.com/LaurieAnnis/3D-artist-Unity-tools/blob/main/docs/removeMissingScriptsToolDocumentation.md" class="btn btn-secondary">Documentation</a>
+                </div>
+            </div>
+        </div>
+
+        <section style="margin-top: 2rem;">
+            <h2>Installation</h2>
+            <ol>
+                <li>Download the `.cs` file you need from the links above</li>
+                <li>Place it in your project's `Assets/Editor/` folder</li>
+                <li>Unity will automatically compile the script</li>
+                <li>Access tools via Unity's menu system (location varies by script)</li>
+            </ol>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>View source and contribute on <a href="https://github.com/LaurieAnnis/3D-artist-Unity-tools" class="repo-link">GitHub</a></p>
+            <p>MIT License - Use freely, no warranty provided</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to show/hide usage documentation
+        document.querySelectorAll('a[href^="#usage-"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.style.display = targetSection.style.display === 'none' ? 'block' : 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@ using UnityEditor;
 
 public static class RemoveMissingScriptPlaceholders
 {
-    [MenuItem("Tools/Cleanup/Remove Missing Script Placeholders")]
+    [MenuItem("Tools/Remove Missing Script Placeholders")]
     public static void RemovePlaceholders()
     {
         int removedCount = 0;

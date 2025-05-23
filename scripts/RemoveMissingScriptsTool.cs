@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public static class RemoveMissingScriptsTool
 {
-    [MenuItem("Tools/Cleanup/Remove Missing Scripts in Scene")]
+    [MenuItem("Tools/Remove Missing Scripts in Scene")]
     public static void RemoveMissingScriptsInScene()
     {
         int removedCount = 0;

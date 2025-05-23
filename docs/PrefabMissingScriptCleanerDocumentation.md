@@ -1,4 +1,4 @@
-# PrefabMissingScriptCleaner Documentation
+# Prefab Missing Script Cleaner Documentation
 
 ## Purpose
 Removes missing script components from prefabs in Unity 6.1+. Solves the common issue where deleted or moved scripts leave "Missing (Mono Script)" references that prevent prefab saving and cause console errors.

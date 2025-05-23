@@ -1,4 +1,4 @@
-# RemoveMissingScriptsTool Documentation
+# Remove Missing Scripts Tool Documentation
 
 ## Purpose
 Unity Editor tool that automatically removes missing script references from GameObjects across all loaded scenes. Missing scripts occur when script files are deleted or moved but references remain on GameObjects, showing as "Missing (Mono Script)" components in the Inspector.

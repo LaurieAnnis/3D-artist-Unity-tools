@@ -52,6 +52,10 @@ The script automatically:
 - Compatible with Unity 6+
 - Editor-only tool (requires UnityEditor namespace)
 
+## Companion Tool
+
+**Remove Missing Script Placeholders** - Cleanup tool that removes all placeholder components after fixing missing scripts. Access via **Tools > Cleanup > Remove Missing Script Placeholders**.
+
 ## Limitations
 
 - Only processes the currently active scene

@@ -59,6 +59,7 @@
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
+            align-items: stretch;
         }
         
         .script-card {
@@ -67,6 +68,9 @@
             padding: 1.5rem;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
         }
         
         .script-card:hover {
@@ -83,12 +87,14 @@
         .script-card p {
             color: #666;
             margin-bottom: 1rem;
+            flex: 1;
         }
         
         .script-actions {
             display: flex;
             gap: 0.5rem;
             flex-wrap: wrap;
+            margin-top: auto;
         }
         
         .btn {
@@ -201,7 +207,7 @@
 
         <section style="margin-top: 2rem;">
             <h2>Installation</h2>
-            <ol>
+            <ol style="margin-left: 2rem;">
                 <li>Download the `.cs` file you need from the links above</li>
                 <li>Place it in your project's `Assets/Editor/` folder</li>
                 <li>Unity will automatically compile the script</li>
